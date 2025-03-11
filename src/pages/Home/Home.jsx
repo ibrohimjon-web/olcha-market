@@ -2,7 +2,6 @@ import "./Home.css";
 import BannerMain from "../../components/banner/BannerMain";
 import MainMain from "../../components/main/MainMain";
 import Product from "../../components/product/Product";
-import FooterMain from "../../components/footer/FooterMain";
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
           <BannerMain />
           <Product />
           <MainMain />
-          <FooterMain />
         </div>
       </div>
     </div>
