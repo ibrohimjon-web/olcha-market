@@ -2,12 +2,10 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import NavbarMain from "./components/navbar/NavbarMain";
 import Home from "./pages/Home/Home";
-import Savat from "./pages/Savat/Savat";
+import Savat from "./pages/savat/Savat";
 import Taqqoslash from "./pages/Taqqoslash/Taqqoslash";
 import Kirish from "./pages/kirish/Kirish";
-import Sevimlilar from "./pages/Sevimlilar/Sevimlilar";
-import FooterTop from "./components/footer/FooterTop";
-import FooterMiddle from "./components/footer/FooterMiddle";
+import Sevimlilar from "./pages/sevimlilar/Sevimlilar";
 import FooterMain from "./components/footer/FooterMain";
 
 function App() {

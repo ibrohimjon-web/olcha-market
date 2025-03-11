@@ -138,7 +138,7 @@ export const DATA = [
   },
 
   {
-    id: 1,
+    id: 16,
     title: "Xiaomi Redmi Note 14 Pro",
     price: 3_900_000,
     oyiga: 457_000,
@@ -147,7 +147,7 @@ export const DATA = [
     ],
   },
   {
-    id: 2,
+    id: 17,
     title: "Apple iPhone 15 Pro Max",
     price: 16_599_000,
     oyiga: 1_944_000,
@@ -156,7 +156,7 @@ export const DATA = [
     ],
   },
   {
-    id: 3,
+    id: 18,
     title: "Sony PlayStation PS5 Digital Edition 1 TB",
     price: 6_199_000,
     oyiga: 726_000,
@@ -165,7 +165,7 @@ export const DATA = [
     ],
   },
   {
-    id: 4,
+    id: 19,
     title: "Redmi Note 14",
     price: 2_319_000,
     oyiga: 272_000,
@@ -174,7 +174,7 @@ export const DATA = [
     ],
   },
   {
-    id: 5,
+    id: 20,
     title: "Samsung Galaxy S25 Ultra",
     price: 14_499_000,
     oyiga: 1_698_000,
@@ -183,7 +183,7 @@ export const DATA = [
     ],
   },
   {
-    id: 6,
+    id: 21,
     title: "MacBook Pro 16” M3 Max",
     price: 25_999_000,
     oyiga: 3_045_000,
@@ -192,7 +192,7 @@ export const DATA = [
     ],
   },
   {
-    id: 7,
+    id: 22,
     title: "Dell XPS 13 Plus",
     price: 18_999_000,
     oyiga: 2_225_000,
@@ -201,7 +201,7 @@ export const DATA = [
     ],
   },
   {
-    id: 8,
+    id: 23,
     title: "Samsung QLED 65” Smart TV",
     price: 12_499_000,
     oyiga: 1_460_000,
@@ -210,7 +210,7 @@ export const DATA = [
     ],
   },
   {
-    id: 9,
+    id: 24,
     title: "Dyson V15 Detect Vacuum Cleaner",
     price: 7_299_000,
     oyiga: 855_000,
@@ -219,7 +219,7 @@ export const DATA = [
     ],
   },
   {
-    id: 10,
+    id: 25,
     title: "GoPro Hero 12 Black",
     price: 4_499_000,
     oyiga: 527_000,
@@ -229,7 +229,7 @@ export const DATA = [
   },
 
   {
-    id: 11,
+    id: 26,
     title: "Asus ROG Strix Gaming Laptop",
     price: 16_299_000,
     oyiga: 1_911_000,
@@ -238,7 +238,7 @@ export const DATA = [
     ],
   },
   {
-    id: 12,
+    id: 27,
     title: "Canon EOS R6 Mark II",
     price: 19_799_000,
     oyiga: 2_325_000,
@@ -247,7 +247,7 @@ export const DATA = [
     ],
   },
   {
-    id: 13,
+    id: 28,
     title: "Bose Noise Cancelling Headphones 700",
     price: 3_299_000,
     oyiga: 385_000,
@@ -256,7 +256,7 @@ export const DATA = [
     ],
   },
   {
-    id: 14,
+    id: 29,
     title: "Apple Watch Ultra 2",
     price: 6_999_000,
     oyiga: 820_000,
@@ -265,7 +265,7 @@ export const DATA = [
     ],
   },
   {
-    id: 15,
+    id: 30,
     title: "Logitech MX Master 3S Mouse",
     price: 1_299_000,
     oyiga: 152_000,

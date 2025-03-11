@@ -22,12 +22,11 @@ const Product = () => {
     <div className="product">
       <div className="container">
         <div className="product-wrapper">
-          {DATA.map((item) => {
+          {DATA.map((item, index) => {
             const isLiked = wishes.some((el) => el.id === item.id);
 
-            
             return (
-              <div key={item.id} className="product-item">
+              <div key={item.id || index} className="product-item">
                 <FaHeart
                   className={`product-heart ${isLiked ? "liked" : "like"}`}
                   onClick={() => handleLike(item)}
@@ -36,7 +35,7 @@ const Product = () => {
                   <img
                     className="product-img"
                     src={item.url}
-                    alt={item.model}
+                    alt={item.model || "Product Image"}
                   />
                 </Link>
                 <Link to={`product/${item.id}`}>
@@ -47,9 +46,8 @@ const Product = () => {
                 <div
                   style={{
                     alignItems: "center",
-                    justifyContent: "center",
-                    display: "flex",
                     justifyContent: "space-between",
+                    display: "flex",
                   }}
                 >
                   <button
@@ -69,8 +67,6 @@ const Product = () => {
                   <FaCartPlus
                     style={{
                       fontSize: "20px",
-                      alignItems: "center",
-                      justifyContent: "center",
                       display: "flex",
                       cursor: "pointer",
                     }}

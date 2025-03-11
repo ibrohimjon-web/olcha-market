@@ -15,10 +15,10 @@ const Sevimlilar = () => {
       <div className="container">
         {sevimlilar.length > 0 ? (
           <div className="wishes-wrapper">
-            {sevimlilar.map((item) => {
+            {sevimlilar.map((item, index) => {
               const isLiked = sevimlilar.some((el) => el.id === item.id);
               return (
-                <div key={item.id} className="product-item">
+                <div key={`${item.id}-${index}`} className="product-item">
                   {/* Yurak tugmasi */}
                   <FaHeart
                     className={`product-heart ${isLiked ? "liked" : "like"}`}
