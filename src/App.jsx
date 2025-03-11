@@ -3,7 +3,7 @@ import "./App.css";
 import NavbarMain from "./components/navbar/NavbarMain";
 import Home from "./pages/Home/Home";
 import Savat from "./pages/savat/Savat";
-import Taqqoslash from "./pages/Taqqoslash/Taqqoslash";
+import Taqqoslash from "./pages/taqqoslash/Taqqoslash";
 import Kirish from "./pages/kirish/Kirish";
 import Sevimlilar from "./pages/sevimlilar/Sevimlilar";
 import FooterMain from "./components/footer/FooterMain";
