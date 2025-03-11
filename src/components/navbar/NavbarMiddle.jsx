@@ -71,7 +71,12 @@ const NavbarMiddle = () => {
             }}
           >
             <BsFillTelephoneFill style={{ fontSize: "25px" }} />
-            <h2 style={{ fontSize: "40px", color: "white" }}>olcha</h2>
+            <h2
+              className="h2-olcha"
+              style={{ fontSize: "40px", color: "#da002bff" }}
+            >
+              olcha
+            </h2>
             <ul>
               <li>
                 <a

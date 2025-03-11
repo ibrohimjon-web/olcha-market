@@ -84,4 +84,10 @@
     color: black;
     font-size: 200px;
   }
+  .navbar-middle {
+    background: none;
+  }
+  .h2-olcha {
+    color: #da002bff;
+  }
 }
