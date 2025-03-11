@@ -1,0 +1,48 @@
+.navbar-top-img img {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-top-text-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.navbar-top-text-logo img {
+  width: 40px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.navbar-top-text-logo {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-top-text-button {
+  padding: 0% 2.5%;
+  color: white;
+  background-color: #c40027ff;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-top-text-wrapper {
+  display: none;
+}
+
+@media only screen and (max-width: 1025px) {
+  .navbar-top-img {
+    display: none;
+  }
+  .navbar-top-text-wrapper {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+}

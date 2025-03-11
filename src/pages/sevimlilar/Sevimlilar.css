@@ -1,0 +1,26 @@
+.wishes-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wishes-wrapper a {
+  text-decoration: none;
+}
+
+.product-buy-wrapperr {
+  padding: 5px 5px 2px 5px;
+  position: absolute;
+  bottom: 10px;
+  font-size: 20px;
+  right: 10px;
+  justify-content: space-between;
+}
+
+.product-buy-wrapperr {
+  border: 1px solid #c90028ff;
+  color: #c90028ff;
+  padding: 3px 35px;
+  background: none;
+  border-radius: 10px;
+}
