@@ -47,7 +47,7 @@ function App() {
         <Route path="/savat" element={<Savat />} />
         <Route path="/taqqoslash" element={<Taqqoslash />} />
         <Route path="/sevimlilar" element={<Sevimlilar />} />
-        <Route path="/product/:id" element={<SingleCard />} />
+        <Route path="/home/product/:id" element={<SingleCard />} />
       </Routes>
       {isAuthenticated && <FooterMain />}
     </div>
