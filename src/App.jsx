@@ -1,14 +1,15 @@
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
+import FooterMain from "./components/footer/FooterMain";
 import NavbarMain from "./components/navbar/NavbarMain";
 import Home from "./pages/Home/Home";
-import Savat from "./pages/savat/Savat";
-import Taqqoslash from "./pages/taqqoslash/Taqqoslash";
 import Kirish from "./pages/kirish/Kirish";
+import Savat from "./pages/savat/Savat";
 import Sevimlilar from "./pages/sevimlilar/Sevimlilar";
-import FooterMain from "./components/footer/FooterMain";
 import SingleCard from "./pages/SingleCard/SingleCard";
+import Taqqoslash from "./pages/taqqoslash/Taqqoslash";
 
 function App() {
   const location = useLocation();
@@ -50,6 +51,7 @@ function App() {
         <Route path="/home/product/:id" element={<SingleCard />} />
       </Routes>
       {isAuthenticated && <FooterMain />}
+      <ToastContainer />
     </div>
   );
 }
