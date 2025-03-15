@@ -1,43 +1,56 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Kirish.css";
-import { Link } from "react-router-dom";
 
-const Kirish = () => {
-  const [phone, setPhone] = useState("+998 ");
+const Kirish = ({ setIsAuthenticated }) => {
+  const navigate = useNavigate();
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
-    let value = e.target.value.replace(/\D/g, "");
-    if (value.length > 12) value = value.slice(0, 12);
+  const correctLogin = "admin";
+  const correctPassword = "1234";
 
-    const formattedPhone = `+998 ${value.slice(3, 5)} ${value.slice(
-      5,
-      8
-    )} ${value.slice(8, 10)} ${value.slice(10, 12)}`.trim();
-    setPhone(formattedPhone);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (login === correctLogin && password === correctPassword) {
+      localStorage.setItem("authToken", "your-token"); // Token saqlash
+      setIsAuthenticated(true); // Global autentifikatsiya holatini yangilash
+      navigate("/home");
+    } else {
+      setError("Login yoki parol xato!");
+    }
   };
 
   return (
-    <div className="login-wrapper">
-      <h3 className="login-title">Telefon raqamini kiriting</h3>
-      <p className="login-message">Tasdiqlash kodini SMS orqali yuboramiz</p>
-      <input
-        type="text"
-        value={phone}
-        onChange={handleChange}
-        maxLength="17"
-        placeholder="+998 00 000 00 00"
-      />
-      <button className="login-send">Kodni olish</button>
-      <p className="login-text">
-        Avtotizatsiyadan o'tish orqali siz{" "}
-        <a href="#">
-          shaxsiy ma'lumotlarni qayta ishlash siyosatiga rozilik bildirasiz
-        </a>
-      </p>
-
-      <Link className="login-asosiysahifa" to={"/"}>
-        Asosiy sahifaga qaytish
-      </Link>
+    <div className="login-container">
+      <div className="login-box">
+        <h2>Kirish</h2>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Login"
+            value={login}
+            onChange={(e) => setLogin(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Parol"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Kirish</button>
+        </form>
+        <div className="login-kanel">
+          <h4>Login yoki parol esdan chiq dimi</h4>
+          <Link style={{ color: "blue", fontSize: "24px" }} to={"/home"}>
+            Shuni bosing
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

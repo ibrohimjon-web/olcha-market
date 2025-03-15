@@ -64,6 +64,9 @@
 
 /* Kichik ekranlar (planshet va kichikroq) */
 @media (max-width: 1024px) {
+  .displeynone {
+    display: none;
+  }
   .footer-bottom-wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 20px;

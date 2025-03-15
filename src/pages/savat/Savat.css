@@ -3,24 +3,41 @@
   justify-content: start;
   align-items: center;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
-.cart-wrapper {
+.cart-wrapper, .cart-summary {
+  background: #fff;
   padding: 40px;
-  text-align: center;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+.cart-summary {
+  padding: 20px;
+  max-width: 1000px;
+  line-height: 1.3;
+  z-index: 100;
 }
 
 .cart-summary input {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
+  border: 2px solid #ddd;
   border-radius: 6px;
   font-size: 16px;
   outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.cart-summary input:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 8px rgba(106, 13, 173, 0.3);
 }
 
 .cart-select-all {
@@ -43,6 +60,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  border-bottom: 1px solid #ddd;
   padding: 15px 0;
 }
 
@@ -76,7 +94,7 @@
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .cart-btn:hover {
@@ -113,40 +131,25 @@
   margin-bottom: 20px;
 }
 
-.cart-empty h1 {
-  font-size: 56px;
+.cart-empty h2 {
+  font-size: 16px;
   margin-bottom: 10px;
   color: #231818;
 }
 
 .cart-link {
   display: inline-block;
-  padding: 25px 25px;
-  background: #c90028ff;
-  color: white;
-  border-radius: 10px;
+  padding: 10px 20px;
+  background: #d7d7d7;
+  color: rgb(20, 10, 10);
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
 .cart-link:hover {
   background: #e73370;
-}
-
-/* Yon tomonda chiqadigan jami bo‘lim */
-.cart-summary {
-  position: absolute;
-  top: 500px;
-  right: 20px;
-  transform: translateY(-50%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 45%;
-  max-width: 1000px;
-  line-height: 1.3;
-  text-align: center;
-  z-index: 100;
 }
 
 .cart-checkout {
@@ -157,7 +160,7 @@
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .cart-checkout:hover {
@@ -165,16 +168,27 @@
 }
 
 @media (max-width: 960px) {
-  .cart-summary {
-    width: 100%;
-    right: 0;
-    transform: translateY(0);
-    top: auto;
-    bottom: 60px;
+  .cart {
+    flex-direction: column;
+    align-items: center;
   }
+
   .cart-wrapper {
     width: 100%;
     max-width: 100%;
-    justify-content: center;
+    padding: 20px;
+  }
+
+  .cart-summary {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-summary h4 {
+    display: none;
   }
 }

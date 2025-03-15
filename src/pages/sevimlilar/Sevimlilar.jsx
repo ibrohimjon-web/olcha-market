@@ -1,10 +1,10 @@
 import React from "react";
+import { FaCartPlus, FaHeart } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { removeFromWishies } from "../../context/likeSlice";
-import { FaHeart, FaCartPlus } from "react-icons/fa";
 import { incCart } from "../../context/cartSlice";
 import "./Sevimlilar.css";
+import { IoStatsChart } from "react-icons/io5";
 
 const Sevimlilar = () => {
   const sevimlilar = useSelector((state) => state.likes.value || []);
@@ -20,10 +20,17 @@ const Sevimlilar = () => {
               return (
                 <div key={`${item.id}-${index}`} className="product-item">
                   {/* Yurak tugmasi */}
-                  <FaHeart
-                    className={`product-heart ${isLiked ? "liked" : "like"}`}
-                    onClick={() => dispatch(removeFromWishies(item))}
-                  />
+                  <div className="product-chart-con">
+                    <FaHeart
+                      className={`product-heart ${isLiked ? "liked" : "like"}`}
+                      onClick={() => handleLike(item)}
+                    />
+                  </div>
+                  <div className="product-chart-con1">
+                    <Link to={"taqqoslash"}>
+                      <IoStatsChart className="product-chart" />
+                    </Link>
+                  </div>
 
                   {/* Mahsulot rasmi */}
                   <Link to={`product/${item.id}`}>
@@ -44,15 +51,13 @@ const Sevimlilar = () => {
                   </Link>
 
                   {/* Savatga qo'shish tugmasi */}
-                  <div className="product-price">
+                  <div className="product-actions">
                     <FaCartPlus
                       className="product-buy"
                       onClick={() => dispatch(incCart(item))}
                     />
+                    <button className="mud-tulov">Muddatli to'lov</button>
                   </div>
-                  <button className="product-buy-wrapperr">
-                    Muddatli to'lov
-                  </button>
                 </div>
               );
             })}

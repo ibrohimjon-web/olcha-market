@@ -44,7 +44,17 @@
 }
 
 /* Media queries */
+
+@media (max-width: 1025px) {
+  .end-img {
+    display: none;
+  }
+
+}
 @media (max-width: 768px) {
+  .end-img {
+    display: block;
+  }
   .footer-topp-wrapper {
     flex-direction: column;
     align-items: center;

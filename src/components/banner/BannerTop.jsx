@@ -7,9 +7,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const images = [
-  "https://olcha.uz/image/original/sliders/oz/cdn_1/2025-02-10/eBKJbU0Db1UU3wpysrb33ngKT3XnD4bF3PTJdIutW8uIHIM9zFgzSCTK77th.jpg",
-  "https://olcha.uz/image/original/sliders/oz/cdn_1/2025-01-23/pEHchQ84G31MgdC2c4eyoAua5ZQAlEKhLPjDCBwqTD4xOMigq4TjevYkEHFi.png",
   "https://olcha.uz/image/original/sliders/oz/cdn_1/2024-05-27/pBbegfLejqOchYPZP0Hkn1Blo2Ok1jfNFBq46vRZ0YQ0LT35CC5mffcXaa7r.jpg",
+  "https://olcha.uz/image/original/sliders/ru/cdn_1/2025-02-07/X67IFeWIUVCgKMgNaV6tIyyMIECqnIXy1p25jVpbUB7YEGtGdZbqtZBT4UiU.jpg",
+  "https://olcha.uz/image/original/sliders/oz/cdn_1/2025-01-23/pEHchQ84G31MgdC2c4eyoAua5ZQAlEKhLPjDCBwqTD4xOMigq4TjevYkEHFi.png",
+  "https://olcha.uz/image/original/sliders/ru/cdn_1/2025-03-13/agkCl3PQYlkaDi9GaSDgvc5Bj9X5bNWYadcQ2Fs7AlsXaT5clDrBPaBrML3c.jpg",
+  "https://olcha.uz/image/original/sliders/oz/cdn_1/2025-02-10/eBKJbU0Db1UU3wpysrb33ngKT3XnD4bF3PTJdIutW8uIHIM9zFgzSCTK77th.jpg",
 ];
 
 const BannerTop = () => {

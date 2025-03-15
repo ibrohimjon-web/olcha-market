@@ -37,8 +37,8 @@ const Savat = () => {
       return;
     }
 
-    const botToken = "8176549282:AAEs1eaa-RNZsNyAdmFNoVjGL1EIsuEhcaI";
-    const chatId = "-1002330883588";
+    const botToken = "7883060261:AAFOYVyk-k_8wYRyVcz_z1SBtKMDqaC-F3s";
+    const chatId = "5069790242";
 
     let message = `🛒 Buyurtma tafsilotlari:\n👤 Ism: ${name}\n👨‍👩‍👧 Familiya: ${surname}\n📍 Manzil: ${location}\n\n`;
 
@@ -160,10 +160,13 @@ const Savat = () => {
           </>
         ) : (
           <div className="cart-empty">
-            <img src="https://olcha.uz/_nuxt/cart.DYGF4swC.png" alt="Cart" />
-            <h1>Savatchangiz bo‘sh</h1>
+            <img
+              src="https://uzum.uz/static/img/shopocat.490a4a1.png"
+              alt="Empty Cart"
+            />
+            <h2>Savat bo‘sh</h2>
             <Link className="cart-link" to="/">
-              Asosiy sahifaga
+              Bosh sahifaga qaytish
             </Link>
           </div>
         )}

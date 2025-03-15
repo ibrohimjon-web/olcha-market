@@ -1,7 +1,9 @@
 import "./Home.css";
-import BannerMain from "../../components/banner/BannerMain";
 import MainMain from "../../components/main/MainMain";
 import Product from "../../components/product/Product";
+//import BannerBottom from "../../components/banner/BannerBottom";
+import BannerMain from "../../components/banner/BannerMain";
+import Katalogs from "../../components/banner/Katalogs";
 
 const Home = () => {
   return (

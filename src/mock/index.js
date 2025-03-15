@@ -20,7 +20,7 @@ export const DATA = [
   },
   {
     id: 3,
-    title: "Sony PlayStation PS5 Digital Edition 1 TB",
+    title: "Sony PlayStation PS5 1 TB",
     price: 6_199_000,
     oyiga: 726_000,
     url: [
@@ -74,7 +74,7 @@ export const DATA = [
   },
   {
     id: 9,
-    title: "Dyson V15 Detect Vacuum Cleaner",
+    title: "Dyson V15 Detect Vacuum",
     price: 7_299_000,
     oyiga: 855_000,
     url: [
@@ -111,7 +111,7 @@ export const DATA = [
   },
   {
     id: 13,
-    title: "Bose Noise Cancelling Headphones 700",
+    title: "Bose Noise Cancelling 700",
     price: 3_299_000,
     oyiga: 385_000,
     url: [
@@ -157,7 +157,7 @@ export const DATA = [
   },
   {
     id: 18,
-    title: "Sony PlayStation PS5 Digital Edition 1 TB",
+    title: "Sony PlayStation PS5 1 TB",
     price: 6_199_000,
     oyiga: 726_000,
     url: [
@@ -211,7 +211,7 @@ export const DATA = [
   },
   {
     id: 24,
-    title: "Dyson V15 Detect Vacuum Cleaner",
+    title: "Dyson V15 Detect Vacuum",
     price: 7_299_000,
     oyiga: 855_000,
     url: [
@@ -248,7 +248,7 @@ export const DATA = [
   },
   {
     id: 28,
-    title: "Bose Noise Cancelling Headphones 700",
+    title: "Bose Noise Cancelling 700",
     price: 3_299_000,
     oyiga: 385_000,
     url: [
