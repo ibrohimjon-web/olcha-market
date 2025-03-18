@@ -39,6 +39,7 @@ const cartSlice = createSlice({
       state.value = state.value.filter((item) => item.id !== payload.id);
 
       localStorage.setItem("cart", JSON.stringify(state.value));
+      toast.warning("Savatdan ayrildi 🤷‍♀️🤦‍♀️");
     },
     removeAllCart(state) {
       state.value = [];

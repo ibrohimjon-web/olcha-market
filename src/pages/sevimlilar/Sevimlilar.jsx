@@ -3,12 +3,21 @@ import { FaCartPlus, FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { incCart } from "../../context/cartSlice";
+import { addToWishies, removeFromWishies } from "../../context/likeSlice";
 import "./Sevimlilar.css";
 import { IoStatsChart } from "react-icons/io5";
 
 const Sevimlilar = () => {
   const sevimlilar = useSelector((state) => state.likes.value || []);
   const dispatch = useDispatch();
+
+  const handleLike = (item) => {
+    if (sevimlilar.some((el) => el.id === item.id)) {
+      dispatch(removeFromWishies(item)); // Remove ishlashi uchun import qiling!
+    } else {
+      dispatch(addToWishies(item)); // Add ishlashi uchun import qiling!
+    }
+  };
 
   return (
     <div className="wishes">
@@ -27,13 +36,13 @@ const Sevimlilar = () => {
                     />
                   </div>
                   <div className="product-chart-con1">
-                    <Link to={"taqqoslash"}>
+                    <Link to={"/taqqoslash"}>
                       <IoStatsChart className="product-chart" />
                     </Link>
                   </div>
 
                   {/* Mahsulot rasmi */}
-                  <Link to={`product/${item.id}`}>
+                  <Link to={`/product/${item.id}`}>
                     <img
                       className="product-img"
                       src={item.url}
@@ -42,7 +51,7 @@ const Sevimlilar = () => {
                   </Link>
 
                   {/* Mahsulot ma'lumotlari */}
-                  <Link to={`product/${item.id}`}>
+                  <Link to={`/product/${item.id}`}>
                     <h3>{item.model}</h3>
                     <p>{item.category}</p>
                     <mark className="product-mark">
@@ -74,7 +83,7 @@ const Sevimlilar = () => {
             <img
               style={{ width: "300px", height: "300px" }}
               src="https://olcha.uz/_nuxt/empty-img.CsNCz2BZ.png"
-              alt=" Icon"
+              alt="Icon"
             />
 
             <h1>Sevimli mahsulotlar yo'q</h1>

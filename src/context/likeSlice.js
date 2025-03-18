@@ -10,11 +10,12 @@ export const likeSlice = createSlice({
     addToWishies(state, action) {
       state.value = [...state.value, action.payload];
       localStorage.setItem("wishes", JSON.stringify(state.value));
-            toast.success("Yoq tirgan laringa qushildi ❣❤💖🖤");
+      toast.success("Yoq tirgan laringa qushildi ❣❤💖🖤");
     },
     removeFromWishies(state, action) {
       state.value = state.value.filter((el) => el.id !== action.payload.id);
       localStorage.setItem("wishes", JSON.stringify(state.value));
+      toast.warn("Yoq tirganlaringizgan ayirdingiz 💔📛❌");
     },
   },
 });

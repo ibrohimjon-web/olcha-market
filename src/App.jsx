@@ -13,42 +13,38 @@ import Taqqoslash from "./pages/taqqoslash/Taqqoslash";
 
 function App() {
   const location = useLocation();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem("authToken")
+  );
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
-    if (token) {
-      setIsAuthenticated(true);
-    }
-  }, []);
-
-  if (!isAuthenticated && location.pathname !== "/kirish") {
-    return <Navigate to="/kirish" />;
-  }
+    setIsAuthenticated(!!token);
+  }, [location.pathname]); // Har safar sahifa o'zgarsa, qayta tekshiradi
 
   return (
     <div>
       {isAuthenticated && <NavbarMain />}
       <Routes>
-        <Route
-          path="/"
-          element={
-            isAuthenticated ? (
-              <Navigate to="/home" />
-            ) : (
-              <Kirish setIsAuthenticated={setIsAuthenticated} />
-            )
-          }
-        />
-        <Route path="/home" element={<Home />} />
-        <Route
-          path="/kirish"
-          element={<Kirish setIsAuthenticated={setIsAuthenticated} />}
-        />
-        <Route path="/savat" element={<Savat />} />
-        <Route path="/taqqoslash" element={<Taqqoslash />} />
-        <Route path="/sevimlilar" element={<Sevimlilar />} />
-        <Route path="/home/product/:id" element={<SingleCard />} />
+        {/* Agar user login qilmagan bo‘lsa, faqat "Kirish" sahifasiga ruxsat beriladi */}
+        {!isAuthenticated ? (
+          <>
+            <Route
+              path="/kirish"
+              element={<Kirish setIsAuthenticated={setIsAuthenticated} />}
+            />
+            <Route path="*" element={<Navigate to="/kirish" />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/savat" element={<Savat />} />
+            <Route path="/taqqoslash" element={<Taqqoslash />} />
+            <Route path="/sevimlilar" element={<Sevimlilar />} />
+            <Route path="/home/product/:id" element={<SingleCard />} />
+          </>
+        )}
       </Routes>
       {isAuthenticated && <FooterMain />}
       <ToastContainer />
